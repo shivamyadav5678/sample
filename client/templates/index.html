@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Client</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <!-- Font Awesome CDN for the paper plane icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h4>Chat</h4>
+        </header>
+
+        <!-- Username Section -->
+        <div class="username-container">
+            <label for="username">Enter your username</label>
+            <div class="username-input">
+                <input type="text" id="username" placeholder="Enter username" />
+                <button id="join-btn">Join</button>
+            </div>
+        </div>
+
+        <!-- Success Message (After Joining) -->
+        <div id="success-message" class="success-message"></div>
+
+        <!-- Chat Box -->
+        <div class="chatbox">
+            <div id="messages"></div>
+        </div>
+        
+
+        <!-- Footer (Message Input with Icon) -->
+        <footer class="footer">
+            <input type="text" id="message" placeholder="Type your message" />
+            <i id="send-icon" class="fa fa-paper-plane" onclick="sendMessage()"></i>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
